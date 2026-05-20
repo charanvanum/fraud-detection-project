@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
 # Load model
-model = joblib.load("models/model.pkl")
+model = joblib.load("../models/model.pkl")
 
 # Load dataset
 data = pd.read_csv("data/creditcard.csv")
