@@ -50,7 +50,23 @@ y_pred = model.predict(X_test)
 # -------------------------------
 # Evaluation
 # -------------------------------
-print("Accuracy:", accuracy_score(y_test, y_pred))
+# ==============================
+# PROJECT RESULTS
+# ==============================
+
+accuracy = accuracy_score(y_test, y_pred) * 100
+
+print("\n======================================")
+print(" AI FRAUD DETECTION SYSTEM RESULTS")
+print("======================================")
+
+print(f"\n Total Transactions : {len(data)}")
+
+print(f"\n Normal Transactions : {len(data[data['Class']==0])}")
+
+print(f"\n Fraud Transactions : {len(data[data['Class']==1])}")
+
+print(f"\n Model Accuracy : {accuracy:.2f}%")
 print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
