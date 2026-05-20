@@ -12,7 +12,9 @@ model_path = os.path.join(BASE_DIR, "models", "model.pkl")
 model = joblib.load(model_path)
 
 # Load dataset
-data = pd.read_csv("data/creditcard.csv")
+data_path = os.path.join(BASE_DIR, "data", "creditcard.csv")
+
+data = pd.read_csv(data_path)
 
 # Preprocessing
 scaler = StandardScaler()
